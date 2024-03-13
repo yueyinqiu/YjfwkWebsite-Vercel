@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>EntityCharacteristics 简介 &#8212; YiJingFramework .EntityRelations</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=72bcf2f2" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=946197a6"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction_to_EntityCharacteristics';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="YiJingFramework.EntityRelations" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">YiJingFramework .EntityRelations</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">主要页面</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">EntityCharacteristics</span></code> 简介</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/YiJingFramework/EntityRelations.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/introduction_to_EntityCharacteristics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>EntityCharacteristics 简介</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="EntityCharacteristics-简介">
+<h1><code class="docutils literal notranslate"><span class="pre">EntityCharacteristics</span></code> 简介<a class="headerlink" href="#EntityCharacteristics-简介" title="Link to this heading">#</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget:YiJingFramework.EntityRelations&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.EntityCharacteristics.Extensions</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes.GuaWithFixedCount</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>YiJingFramework.EntityRelations, 4.0.1</span></li></ul></div></div></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">YiJingFramework.EntityRelations.EntityCharacteristics</span></code> 命名空间主要提供易学实体的阴阳五行属性。目前包括八卦和干支的五行，举例而言：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.EntityCharacteristics.Extensions</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes.GuaWithFixedCount</span><span class="p">;</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">qian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GuaTrigram</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;111&quot;</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian</span><span class="p">.</span><span class="n">Yinyang</span><span class="p">());</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian</span><span class="p">.</span><span class="n">Wuxing</span><span class="p">());</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">zi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dizhi</span><span class="p">.</span><span class="n">Zi</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">zi</span><span class="p">.</span><span class="n">Yinyang</span><span class="p">());</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">zi</span><span class="p">.</span><span class="n">Wuxing</span><span class="p">());</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">jia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Tiangan</span><span class="p">.</span><span class="n">Yi</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jia</span><span class="p">.</span><span class="n">Yinyang</span><span class="p">());</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">jia</span><span class="p">.</span><span class="n">Wuxing</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Yang
+Jin
+Yang
+Shui
+Yin
+Mu
+</pre></div></div>
+</div>
+<p>其中，关于八卦会返回如下结果：</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>000</p></th>
+<th class="head"><p>001</p></th>
+<th class="head"><p>010</p></th>
+<th class="head"><p>011</p></th>
+<th class="head"><p>100</p></th>
+<th class="head"><p>101</p></th>
+<th class="head"><p>110</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>阴阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阴</p></td>
+</tr>
+<tr class="row-odd"><td><p>五行</p></td>
+<td><p>土</p></td>
+<td><p>土</p></td>
+<td><p>水</p></td>
+<td><p>木</p></td>
+<td><p>木</p></td>
+<td><p>火</p></td>
+<td><p>金</p></td>
+</tr>
+</tbody>
+</table>
+<p>关于天干会返回如下结果：</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>甲</p></th>
+<th class="head"><p>乙</p></th>
+<th class="head"><p>丙</p></th>
+<th class="head"><p>丁</p></th>
+<th class="head"><p>戊</p></th>
+<th class="head"><p>己</p></th>
+<th class="head"><p>庚</p></th>
+<th class="head"><p>辛</p></th>
+<th class="head"><p>壬</p></th>
+<th class="head"><p>癸</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>阴阳</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+</tr>
+<tr class="row-odd"><td><p>五行</p></td>
+<td><p>木</p></td>
+<td><p>木</p></td>
+<td><p>火</p></td>
+<td><p>火</p></td>
+<td><p>土</p></td>
+<td><p>土</p></td>
+<td><p>金</p></td>
+<td><p>金</p></td>
+<td><p>水</p></td>
+<td><p>水</p></td>
+</tr>
+</tbody>
+</table>
+<p>关于地支会返回如下结果：</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>子</p></th>
+<th class="head"><p>丑</p></th>
+<th class="head"><p>寅</p></th>
+<th class="head"><p>卯</p></th>
+<th class="head"><p>辰</p></th>
+<th class="head"><p>巳</p></th>
+<th class="head"><p>午</p></th>
+<th class="head"><p>未</p></th>
+<th class="head"><p>申</p></th>
+<th class="head"><p>酉</p></th>
+<th class="head"><p>戌</p></th>
+<th class="head"><p>亥</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>阴阳</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+<td><p>阳</p></td>
+<td><p>阴</p></td>
+</tr>
+<tr class="row-odd"><td><p>五行</p></td>
+<td><p>水</p></td>
+<td><p>土</p></td>
+<td><p>木</p></td>
+<td><p>木</p></td>
+<td><p>土</p></td>
+<td><p>火</p></td>
+<td><p>火</p></td>
+<td><p>土</p></td>
+<td><p>金</p></td>
+<td><p>金</p></td>
+<td><p>土</p></td>
+<td><p>水</p></td>
+</tr>
+</tbody>
+</table>
+<p>需要注意，其中地支的阴阳是相互间隔取的。部分情况下，可能使用的不是这一套阴阳。</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">YiJingFramework.EntityRelations</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  这里是 YiJingFramework.EntityRelations 的文档。前往 <a href="https://yjfwk.yueyinqiu.top/">https://yjfwk.yueyinqiu.top/</a> 查看更多项目。
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
