@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>简介 &#8212; YiJingFramework. Nongli</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=72bcf2f2" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=946197a6"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="YiJingFramework.Nongli" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">YiJingFramework. Nongli</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">主要页面</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">简介</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/YiJingFramework/Nongli.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/introduction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>简介</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="简介">
+<h1>简介<a class="headerlink" href="#简介" title="Link to this heading">#</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget:YiJingFramework.Nongli&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.Nongli.Extensions</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.Nongli.Lunar</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.Nongli.Solar</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>YiJingFramework.Nongli, 4.1.0</span></li></ul></div></div></div>
+</div>
+<p>此包提供了对中国农历的支持。</p>
+<p>此包是通过打表的方式获取的节气等信息，而非直接从天文原理出发进行的计算。因此，这里首先要感谢 <a class="reference external" href="https://www.nuget.org/packages/lunar-csharp">lunar-csharp</a> 对相关社区作出的巨大贡献。本包所有用到的节气表等都是通过该包进行生成的，本包的测试项目也是依赖于该包的。</p>
+<p>相比而言， lunar-csharp 非常强调“无依赖”，其功能非常丰富，但都汇集在同一个包中，且与日期本身关联性很强。以其提供的冲煞功能为例，可以获取某日时的日冲、时冲等，但不方便直接获取某个地支的六冲。而本包作为 YiJingFramework 中的一部分，与其他包共用 <code class="docutils literal notranslate"><span class="pre">Tiangan</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Dizhi</span></code> 等类型。于是此包可以专注于农历日期本身，而更多的功能将由其他的包另外提供。</p>
+<p>同时， lunar-csharp 支持的时间跨度非常大。除了向后的推演计算，更困难的是还支持向前的查询，因为古时的历法系统其实是相对混乱的，会出现各种例外情况。这些都需要进行相关的研究才能确定如何取舍，不能完全根据现在的天文情况进行推断。本包考虑到，在非专业情况下，一般不会需要古时的日期，更不会把它在农历和公历之间进行转换，而且由于是通过打表进行实现的，因此，本包没有支持太长的时间跨度。在有需要的情况下，更新一下相关表格就可以对其进行扩展了。</p>
+<p>本包使用起来也比较简单，举例而言，要获取今日的农历日期：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">DateTime</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DateTime</span><span class="p">(</span><span class="m">2023</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">26</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">44</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">);</span>
+<span class="n">LunarDateTime</span><span class="w"> </span><span class="n">lunar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LunarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">now</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{lunar.Nian:C}年&quot;</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{(lunar.IsRunyue ? &#39;闰&#39; : &#39;平&#39;)}{lunar.Yue}月&quot;</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{lunar.Ri}日&quot;</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{lunar.Shi:C}时&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{n} {y} {r} {s}&quot;</span><span class="p">);</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{lunar.YearInChinese()}年{lunar.YueInChinese()}月{lunar.RiInChinese()}&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+
+<span class="n">SolarDateTime</span><span class="w"> </span><span class="n">solar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SolarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">now</span><span class="p">);</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{solar.Nian:C} {solar.Yue:C} {solar.Ri:C} {solar.Shi:C}&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+癸卯年 平7月 11日 戌时
+二〇二三年七月十一
+癸卯 庚申 丙辰 戊戌
+</pre></div></div>
+</div>
+<p>可以看出，此包区分了农历的阳历部分和阴历部分。其中，阳历部分即干支历，年月日时均以干支表示；阴历部分即几月初几之类，月与日用数字表示，但时辰和年仍使用干支。</p>
+<p>上述代码其实是演示了如何从公历转为农历。同时，此包也提供了从农历转到公历的方式：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">LunarNian</span><span class="w"> </span><span class="n">nian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LunarNian</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="m">2023</span><span class="p">);</span>
+<span class="n">LunarYue</span><span class="w"> </span><span class="n">yue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nian</span><span class="p">.</span><span class="n">Yues</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+<span class="n">LunarDateTime</span><span class="w"> </span><span class="n">lunar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yue</span><span class="p">.</span><span class="n">GetDateTime</span><span class="p">(</span><span class="n">ri</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="n">shi</span><span class="p">:</span><span class="w"> </span><span class="n">Dizhi</span><span class="p">.</span><span class="n">Chen</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">lunar</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">lunar</span><span class="p">.</span><span class="n">ToGregorian</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+N:Guimao2023 Y:C01 R:15 S:Chen
+2/5/2023 8:00:00 AM
+</pre></div></div>
+</div>
+<p>其中我们使用了 <code class="docutils literal notranslate"><span class="pre">LunarNian.FromGregorian(2023)</span></code> 以创建一个 <code class="docutils literal notranslate"><span class="pre">LunarNian</span></code> 。这里传入的 <code class="docutils literal notranslate"><span class="pre">2023</span></code> 以表示要获取的农历年年首位于公历 2023 年内，因为只靠干支是无法判断具体是哪一年的，于是就没法知道此年内月份的情况，更没有办法进行公历日期的转换。也就是说，其实农历年年首所在的公历年是会被切实记录的，可以通过 <code class="docutils literal notranslate"><span class="pre">LunarNian.Year</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LunarDateTime.Year</span></code> 获取。阳历部分中也有类似的情况。</p>
+<p>同时，转换的结果是 <code class="docutils literal notranslate"><span class="pre">2023/2/5</span> <span class="pre">8:00:00</span></code> ，这意味着它是使用时辰中间的时间作为小时数。同时，子时将会被认定为第二天，包括在 <code class="docutils literal notranslate"><span class="pre">LunarDateTime.FromGregorian</span></code> 中也是一样：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dateTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;2023/8/26 23:12:22&quot;</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">lunar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LunarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">dateTime</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">lunar</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">lunar</span><span class="p">.</span><span class="n">ToGregorian</span><span class="p">());</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+N:Guimao2023 Y:C07 R:12 S:Zi
+8/27/2023 12:00:00 AM
+</pre></div></div>
+</div>
+<p>在阳历部分中也有相同的情况，同时，阳历部分还涉及到交节换月。与大多数情况不同，为了和阴历部分保持一致，我们选择在交节当天换月，而不是交节时刻。如有需要，可以通过 <code class="docutils literal notranslate"><span class="pre">SolarYue.Jieling</span></code> 自行判断是否还没有到交节时刻：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dateTime8822</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;2023/8/8 22:59:59&quot;</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">solar8822</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SolarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">dateTime8822</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">solar8822</span><span class="p">.</span><span class="n">Yue</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">dateTime8722</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;2023/8/7 22:59:59&quot;</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">solar8722</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SolarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">dateTime8722</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">solar8722</span><span class="p">.</span><span class="n">Yue</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">dateTime8723</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;2023/8/7 23:00:00&quot;</span><span class="p">);</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">solar8723</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SolarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">dateTime8723</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">solar8723</span><span class="p">.</span><span class="n">Yue</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">jieling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solar8723</span><span class="p">.</span><span class="n">SolarYue</span><span class="p">.</span><span class="n">Jieling</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">dateTime8723</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">jieling</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">dateTime8822</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">jieling</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Gengshen
+Jiwei
+Gengshen
+True
+True
+</pre></div></div>
+</div>
+<p>最后，关于节气，此包中，暂时还没有提供直接明确的支持，但也可以通过 <code class="docutils literal notranslate"><span class="pre">SolarYue</span></code> 间接获取：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetJieqi</span><span class="p">(</span><span class="n">DateTime</span><span class="w"> </span><span class="n">dateTime</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">jieqiTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;立春&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;雨水&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;惊蛰&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;春分&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;清明&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;谷雨&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;立夏&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;小满&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;芒种&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;夏至&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;小暑&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;大暑&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;立秋&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;处暑&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;白露&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;秋分&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;寒露&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;霜降&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;立冬&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;小雪&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;大雪&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;冬至&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;小寒&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;大寒&quot;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">solar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SolarDateTime</span><span class="p">.</span><span class="n">FromGregorian</span><span class="p">(</span><span class="n">dateTime</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">jieqiIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solar</span><span class="p">.</span><span class="n">SolarYue</span><span class="p">.</span><span class="n">IndexInNian</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">solar</span><span class="p">.</span><span class="n">IsBeforeYueZhongqi</span><span class="p">)</span>
+<span class="w">        </span><span class="n">jieqiIndex</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">jieqiTable</span><span class="p">[</span><span class="n">jieqiIndex</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">GetJieqi</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DateTime</span><span class="p">(</span><span class="m">2023</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">)));</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">GetJieqi</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DateTime</span><span class="p">(</span><span class="m">2023</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">23</span><span class="p">)));</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+白露
+秋分
+</pre></div></div>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">YiJingFramework.Nongli</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  这里是 YiJingFramework.Nongli 的文档。前往 <a href="https://yjfwk.yueyinqiu.top/">https://yjfwk.yueyinqiu.top/</a> 查看更多项目。
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
