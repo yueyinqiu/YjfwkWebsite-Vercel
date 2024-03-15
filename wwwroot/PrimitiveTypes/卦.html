@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
+    <title>卦 &#8212; YiJingFramework. PrimitiveTypes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=72bcf2f2" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=946197a6"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '卦';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="阴阳" href="%E9%98%B4%E9%98%B3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">YiJingFramework. PrimitiveTypes</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">主要页面</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%80%E4%BB%8B.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%BA%94%E8%A1%8C.html">五行</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%A4%A9%E5%B9%B2%E5%9C%B0%E6%94%AF.html">天干地支</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E9%98%B4%E9%98%B3.html">阴阳</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">卦</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/YiJingFramework/PrimitiveTypes.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/卦.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>卦</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#创建">创建</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Gua-和-string-的相互转换">Gua 和 string 的相互转换</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Gua-和-byte[]-的相互转换">Gua 和 byte[] 的相互转换</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="卦">
+<h1>卦<a class="headerlink" href="#卦" title="Link to this heading">#</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget:YiJingFramework.PrimitiveTypes&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>YiJingFramework.PrimitiveTypes, 4.0.1</span></li></ul></div></div></div>
+</div>
+<p>卦是由若干具有阴阳属性的爻组成的。通常来说，常用的卦一般只具有三根爻（八卦）或六根爻（六十四卦），但是这里的 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 支持任意的爻数。</p>
+<blockquote>
+<div><p><a class="reference external" href="https://yjfwk.yueyinqiu.top/PrimitiveTypes.GuaWithFixedCount/">YiJingFramework.PrimitiveTypes.GuaWithFixedCount</a> 提供了只支持固定爻数的卦，从而能够及时在编译期发现错误。</p>
+</div></blockquote>
+<section id="创建">
+<h2>创建<a class="headerlink" href="#创建" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Gua</span></code> 其实就是一个不可变的、有序的爻的集合，可以通过以下方式来创建它：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gua</span><span class="p">(</span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yang</span><span class="p">,</span><span class="w"> </span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yang</span><span class="p">,</span><span class="w"> </span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yin</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">dui</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">qian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gua</span><span class="p">(</span><span class="n">Enumerable</span><span class="p">.</span><span class="n">Repeat</span><span class="p">(</span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yang</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">));</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+110
+111111
+</pre></div></div>
+</div>
+<p>虽然其顺序本身是可以颠倒的，但是我们约定取易气上行、先来居下、由下至上之意，即序号小的在下、序号大的在上（所谓上下即常用的卦画的上下），如上例“阳阳阴”表示兑卦而非巽卦。包括 <a class="reference external" href="https://yjfwk.yueyinqiu.top/EntityRelations/">YiJingFramework.EntityRelations</a> 和 <a class="reference external" href="https://yjfwk.yueyinqiu.top/Annotating.Zhouyi/">YiJingFramework.Annotating.Zhouyi</a> 在内的各种包，都是按照由下至上的理解方式来提供功能的。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gua</span></code> 实现了 <code class="docutils literal notranslate"><span class="pre">IReadOnlyList</span></code> ，因此可以当作列表使用。无论是通过索引器访问，还是通过 <code class="docutils literal notranslate"><span class="pre">foreach</span></code> 遍历，都是由下至上的顺序：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gua</span><span class="p">(</span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yang</span><span class="p">,</span><span class="w"> </span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yang</span><span class="p">,</span><span class="w"> </span><span class="n">Yinyang</span><span class="p">.</span><span class="n">Yin</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">dui</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{dui[0]:C}{dui[1]:C}{dui[2]:C}&quot;</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{string.Join(&#39;,&#39;, dui)}&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+110
+阳阳阴
+Yang,Yang,Yin
+</pre></div></div>
+</div>
+</section>
+<section id="Gua-和-string-的相互转换">
+<h2>Gua 和 string 的相互转换<a class="headerlink" href="#Gua-和-string-的相互转换" title="Link to this heading">#</a></h2>
+<p>先前的示例已经显示了 <code class="docutils literal notranslate"><span class="pre">Gua.ToString</span></code> 的效果。这里考虑到 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 支持任意的爻数，让它返回 <code class="docutils literal notranslate"><span class="pre">&quot;乾&quot;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">&quot;兑&quot;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">&quot;离&quot;</span></code> 、 <code class="docutils literal notranslate"><span class="pre">&quot;震&quot;</span></code> 等结果并不合适。因此不同于<a class="reference internal" href="%E4%BA%94%E8%A1%8C.html"><span class="doc">五行</span></a>、<a class="reference internal" href="%E5%A4%A9%E5%B9%B2%E5%9C%B0%E6%94%AF.html"><span class="doc">干支</span></a>、<a class="reference internal" href="%E9%98%B4%E9%98%B3.html"><span class="doc">阴阳</span></a>等类型，它返回的是一组数字，其中 <code class="docutils literal notranslate"><span class="pre">0</span></code> 表示阴爻、 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示阳爻。如果需要得到卦名，可以尝试使用 <a class="reference external" href="https://yjfwk.yueyinqiu.top/Annotating.Zhouyi/">YiJingFramework.Annotating.Zhouyi</a> 。</p>
+<blockquote>
+<div><p>如果仅仅只是为了得到卦名， <a class="reference external" href="https://yjfwk.yueyinqiu.top/Annotating.Zhouyi/">YiJingFramework.Annotating.Zhouyi</a> 可能有些笨重了，或许自己实现一个转换还是比较方便的。</p>
+</div></blockquote>
+<p>同样的，<code class="docutils literal notranslate"><span class="pre">Gua</span></code> 也提供了 <code class="docutils literal notranslate"><span class="pre">Parse</span></code> 和 <code class="docutils literal notranslate"><span class="pre">TryParse</span></code> 方法，支持从字符串转换到 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 。</p>
+</section>
+<section id="Gua-和-byte[]-的相互转换">
+<h2>Gua 和 byte[] 的相互转换<a class="headerlink" href="#Gua-和-byte[]-的相互转换" title="Link to this heading">#</a></h2>
+<p>除 <code class="docutils literal notranslate"><span class="pre">string</span></code> 外， <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 和 <code class="docutils literal notranslate"><span class="pre">byte[]</span></code> 之间也可以相互转换：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">Yinyang</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetRandomLines</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Random</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="nf">return</span><span class="w"> </span><span class="p">(</span><span class="n">Yinyang</span><span class="p">)</span><span class="n">random</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">gua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gua</span><span class="p">(</span><span class="n">GetRandomLines</span><span class="p">().</span><span class="n">Take</span><span class="p">(</span><span class="m">30</span><span class="p">));</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">gua</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">byteArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gua</span><span class="p">.</span><span class="n">ToBytes</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">Convert</span><span class="p">.</span><span class="n">ToHexString</span><span class="p">(</span><span class="n">byteArray</span><span class="p">));</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">gua2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Gua</span><span class="p">.</span><span class="n">FromBytes</span><span class="p">(</span><span class="n">byteArray</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">gua</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">gua2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+111101101000101011101110111110
+6F51775F
+True
+</pre></div></div>
+</div>
+<p>这种转换一般只会在非常特殊的场合下使用。而且即使需要使用，一般也不需要关注得到的 <code class="docutils literal notranslate"><span class="pre">byte[]</span></code> 具体是什么值，只需要知道它可以正确还原就足够了。</p>
+<p>在转换时，会使用 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示阳、 <code class="docutils literal notranslate"><span class="pre">0</span></code> 表示阴，越低位所表示的爻也越靠下。由于爻的个数是不确定的，在最高位会额外写一个 <code class="docutils literal notranslate"><span class="pre">1</span></code> 以表示解析的起点（也可以叫终点）。举例而言，兑卦“阳阳阴”，转为数字得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0]</span></code>（左侧是低位，右侧是高位）；然后最高位添一，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> ；填充为八的整数倍，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> ，这就是最后的结果了。但常规的数字写法是左高右低的，即得到的是 <code class="docutils literal notranslate"><span class="pre">[0b0000_1011]</span></code> 。又如“阳阳阳阴阳阳阳阳阳”：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>   阳阳阳阴 阳阳阳阳 阳
+-&gt; 1,1,1,0, 1,1,1,1, 1
+-&gt; 1,1,1,0, 1,1,1,1, 1,1
+-&gt; (1110 1111) (1100 0000)
+-&gt; 0b0000_0011 at bytes[1]
+   0b1111_0111 at bytes[0]
+-&gt; [0b1111_0111, 0b0000_0011]
+      8765 4321           |9
+</pre></div>
+</div>
+<p>其中特别要注意的是，最高位的 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示结束，而不是一根爻，因此比如在取错卦时，不能把它一同取反。因此，这样的转换其实并没有太大的作用，只有非常特殊的情况下可能用到。</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="%E9%98%B4%E9%98%B3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">阴阳</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#创建">创建</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Gua-和-string-的相互转换">Gua 和 string 的相互转换</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Gua-和-byte[]-的相互转换">Gua 和 byte[] 的相互转换</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  这里是 YiJingFramework.PrimitiveTypes 的文档。前往 <a href="https://yjfwk.yueyinqiu.top/">https://yjfwk.yueyinqiu.top/</a> 查看更多项目。
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
