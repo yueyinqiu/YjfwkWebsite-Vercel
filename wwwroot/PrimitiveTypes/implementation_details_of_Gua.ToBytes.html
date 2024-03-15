@@ -7,8 +7,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Gua.ToBytes 的实现细节 &#8212; PrimitiveTypes (YiJingFramework)</title>
+    <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
+    <title>Gua.ToBytes 的实现细节 &#8212; YiJingFramework. PrimitiveTypes</title>
   
   
   
@@ -132,7 +132,7 @@
   
   
   
-    <p class="title logo__title">PrimitiveTypes (YiJingFramework)</p>
+    <p class="title logo__title">YiJingFramework. PrimitiveTypes</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -325,7 +325,7 @@ document.write(`
 <p>使用 <code class="docutils literal notranslate"><span class="pre">Gua.ToBytes</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Gua.FromBytes</span></code> 可以在 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 和 <code class="docutils literal notranslate"><span class="pre">byte[]</span></code> 之间相互转换。</p>
 <p>此页面是介绍它的实现细节的，通常来说可能不需要阅读此页。因为这种转换一般不需要使用，即使使用，也不需要关注得到的 <code class="docutils literal notranslate"><span class="pre">byte[]</span></code> 具体是什么值，只需要知道它可以正确还原就足够了。</p>
 <p>在转换时，会使用 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示阳、 <code class="docutils literal notranslate"><span class="pre">0</span></code> 表示阴，越低位所表示的爻也越在下（所谓上下即常用的卦画的上下）。由于爻的个数是不确定的，在最高位会额外写一个 <code class="docutils literal notranslate"><span class="pre">1</span></code> 以表示解析的起点（也可以叫终点）。</p>
-<p>举例而言，兑卦“阳阳阴”，转为数字得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0]</span></code> （左侧是低位，右侧是高位）；然后最高位添一，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> ；填充为八的整数倍，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code> ，这就是最后的结果了。但常规的数字写法是左高右低的，即得到的是 <code class="docutils literal notranslate"><span class="pre">[0b0000_1011]</span></code> 。</p>
+<p>举例而言，兑卦“阳阳阴”，转为数字得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0]</span></code>（左侧是低位，右侧是高位）；然后最高位添一，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code>；填充为八的整数倍，得 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>，这就是最后的结果了。但常规的数字写法是左高右低的，即得到的是 <code class="docutils literal notranslate"><span class="pre">[0b0000_1011]</span></code>。</p>
 <p>又如“阳阳阳阴阳阳阳阳阳”：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>   阳阳阳阴 阳阳阳阳 阳
 -&gt; 1,1,1,0, 1,1,1,1, 1
@@ -334,10 +334,10 @@ document.write(`
 -&gt; 0b0000_0011 at bytes[1]
    0b1111_0111 at bytes[0]
 -&gt; [0b1111_0111, 0b0000_0011]
-      8765 4321            9    &lt;- 从低到高的顺序
+      8765 4321           |9
 </pre></div>
 </div>
-<p>以上就是关于 <code class="docutils literal notranslate"><span class="pre">Gua.ToBytes</span></code> 的所有内容了。其中需要注意，最高位的 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示结束，而不是一根爻，因此比如在取错卦时，不能把它取反。同时，由于书写习惯，最低位的爻是整个数组最左侧的值的最右侧，需要稍加注意。</p>
+<p>以上就是关于 <code class="docutils literal notranslate"><span class="pre">Gua.ToBytes</span></code> 的所有内容了。其中需要注意，最高位的 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示结束，而不是一根爻，因此比如在取错卦时，不能把它取反。同时，由于书写习惯，最低位的爻是整个数组最左侧值的最右侧，需要稍加注意。</p>
 </section>
 
 
