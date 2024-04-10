@@ -7,8 +7,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>简介 &#8212; YiJingFramework .PrimitiveTypes .GuaWithFixedCount</title>
+    <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
+    <title>简介 &#8212; YiJingFramework. PrimitiveTypes. GuaWithFixedCount</title>
   
   
   
@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="YiJingFramework.PrimitiveTypes.GuaWithFixedCount" href="index.html" />
+    <link rel="prev" title="GuaWithFixedCount" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -133,7 +133,7 @@
   
   
   
-    <p class="title logo__title">YiJingFramework .PrimitiveTypes .GuaWithFixedCount</p>
+    <p class="title logo__title">YiJingFramework. PrimitiveTypes. GuaWithFixedCount</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -337,7 +337,7 @@ document.write(`
 <div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>YiJingFramework.PrimitiveTypes.GuaWithFixedCount, 4.0.1</span></li></ul></div></div></div>
 </div>
 <p>此包提供了一系列类型，可以表示具有固定爻数的卦，便于在编译期及时发现爻数错误。此包使用了源代码生成器技术，使用相同的模板生成了 <code class="docutils literal notranslate"><span class="pre">GuaEmpty</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith1Yao</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith2Yaos</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaTrigram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith4Yaos</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith5Yaos</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaHexagram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith7Yaos</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GuaWith8Yaos</span></code> 和 <code class="docutils literal notranslate"><span class="pre">GuaWith9Yaos</span></code> 十种类型，因此它们的表现会是完全相同的。</p>
-<p>它们提供了与 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> （在 <a class="reference external" href="https://github.com/YiJingFramework/PrimitiveTypes/wiki">YiJingFramework.PrimitiveTypes</a> 中）非常类似的功能，只是额外在创建时进行了爻数检查。在它们的内部就是保存了一个 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> ，几乎所有行为都是调用它来实现的。可以通过 <code class="docutils literal notranslate"><span class="pre">AsGua</span></code> 和 <code class="docutils literal notranslate"><span class="pre">AsFixed</span></code> 方法将具有固定爻数的卦和 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 相互转换：</p>
+<p>它们提供了与 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> （在 <a class="reference external" href="https://yjfwk.yueyinqiu.top/PrimitiveTypes/">YiJingFramework.PrimitiveTypes</a> 中）非常类似的功能，只是额外在创建时进行了爻数检查。在它们的内部就是保存了一个 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> ，几乎所有行为都是调用它来实现的。可以通过 <code class="docutils literal notranslate"><span class="pre">AsGua</span></code> 和 <code class="docutils literal notranslate"><span class="pre">AsFixed</span></code> 方法将具有固定爻数的卦和 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 相互转换：</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -360,7 +360,7 @@ True
 False
 </pre></div></div>
 </div>
-<p>从上例中的 <code class="docutils literal notranslate"><span class="pre">trigram.Equals(gua)</span></code> 为 <code class="docutils literal notranslate"><span class="pre">false</span></code> 可以看出，这些具有固定爻数的卦与 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 被视为完全无关的类型。它们之间没有继承关系，不可以进行比较等操作，也不提供显式或隐式转换运算。除此之外，这些具有固定爻数的卦还不提供 <code class="docutils literal notranslate"><span class="pre">ToBytes</span></code> 和 <code class="docutils literal notranslate"><span class="pre">FromBytes</span></code> 方法，可以先转换为 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 再进行操作。这种转换的开销并不大，因为它的内部本来就是保存了一个 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> ，只是将它返回出来而已。</p>
+<p>需注意上例中 <code class="docutils literal notranslate"><span class="pre">trigram.Equals(gua)</span></code> 的值为 <code class="docutils literal notranslate"><span class="pre">false</span></code> ，因为这些具有固定爻数的卦与 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 被视为完全无关的类型。它们之间不具有继承关系，不可以进行比较等操作，也不提供显式或隐式转换运算。除此之外，这些具有固定爻数的卦还不提供 <code class="docutils literal notranslate"><span class="pre">ToBytes</span></code> 和 <code class="docutils literal notranslate"><span class="pre">FromBytes</span></code> 方法，可以先转换为 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 再进行操作。这种转换的开销并不大，因为它会直接返回内部的 <code class="docutils literal notranslate"><span class="pre">Gua</span></code> 而没有进行复制操作。</p>
 <p>最后值得一提的是，所有的固定爻数的卦全部实现了 <code class="docutils literal notranslate"><span class="pre">IGuaWithFixedCount</span></code> 接口，在设计一些关于它们的方法的时候可能会比较方便，比如获取错卦，可以指定一个泛型 <code class="docutils literal notranslate"><span class="pre">TGua</span> <span class="pre">:</span> <span class="pre">notnull,</span> <span class="pre">IGuaWithFixedCount</span></code> 的参数，返回值也是相同的 <code class="docutils literal notranslate"><span class="pre">TGua</span></code> 。</p>
 </section>
 
@@ -381,7 +381,7 @@ False
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">YiJingFramework.PrimitiveTypes.GuaWithFixedCount</p>
+        <p class="prev-next-title">GuaWithFixedCount</p>
       </div>
     </a>
 </div>
