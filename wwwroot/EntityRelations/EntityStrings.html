@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
-    <title>YiJingFramework.EntityRelations &#8212; YiJingFramework. EntityRelations</title>
+    <title>EntityStrings &#8212; YiJingFramework. EntityRelations</title>
   
   
   
@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=72bcf2f2" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -42,10 +43,13 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="_static/translations.js?v=beaddf03"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'EntityStrings';</script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="EntityCharacteristics" href="EntityCharacteristics.html" />
+    <link rel="next" title="GuaCharacters" href="GuaCharacters.html" />
+    <link rel="prev" title="EntityCharacteristics" href="EntityCharacteristics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -107,8 +111,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -125,7 +127,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -149,9 +151,9 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">主要页面</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="EntityCharacteristics.html">EntityCharacteristics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EntityStrings.html">EntityStrings</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">EntityStrings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GuaCharacters.html">GuaCharacters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GuaDerivations.html">GuaDerivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="WuxingRelations.html">WuxingRelations</a></li>
@@ -224,7 +226,7 @@
       
       
       
-      <li><a href="_sources/index.rst" target="_blank"
+      <li><a href="_sources/EntityStrings.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="下载源文件"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -234,7 +236,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.rst</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -306,7 +308,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>YiJingFramework.EntityRelations</h1>
+    <h1>EntityStrings</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -320,14 +322,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="yijingframework-entityrelations">
-<h1>YiJingFramework.EntityRelations<a class="headerlink" href="#yijingframework-entityrelations" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section id="EntityStrings">
+<h1>EntityStrings<a class="headerlink" href="#EntityStrings" title="Link to this heading">#</a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
 </div>
-<p>YiJingFramework.EntityRelations 是 <a class="reference external" href="https://yjfwk.yueyinqiu.top/">YiJingFramework</a> 中的一个包。此包提供了一些关于易学实体之间的关系。</p>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>目前还在更新新的功能，相关内容可能不完整。</p>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget:YiJingFramework.EntityRelations&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.EntityStrings</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.EntityStrings.Conversions</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.EntityStrings.Extensions</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.EntityRelations.WuxingRelations</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">YiJingFramework.PrimitiveTypes</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>YiJingFramework.EntityRelations, 4.0.1</span></li></ul></div></div></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">YiJingFramework.EntityRelations.EntityStrings</span></code> 命名空间主要提供易学实体到字符串的转换。举例而言：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">toShengxiao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DizhiToStringConversions</span><span class="p">.</span><span class="n">Shengxiao</span><span class="p">;</span>
+<span class="n">Tiangan</span><span class="w"> </span><span class="n">yearGan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Tiangan</span><span class="p">.</span><span class="n">Gui</span><span class="p">;</span>
+<span class="n">Dizhi</span><span class="w"> </span><span class="n">yearZhi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dizhi</span><span class="p">.</span><span class="n">Mao</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{yearGan:C}{yearZhi:C}{yearZhi.ToString(toShengxiao)}年&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">toChinese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WuxingRelationToStringConversions</span><span class="p">.</span><span class="n">InChinese</span><span class="p">;</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">toLiuqin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WuxingRelationToStringConversions</span><span class="p">.</span><span class="n">Liuqin</span><span class="p">;</span>
+<span class="n">WuxingRelation</span><span class="w"> </span><span class="n">relation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WuxingRelation</span><span class="p">.</span><span class="n">ShengsMe</span><span class="p">;</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;{relation.ToString(toChinese)}为{relation.ToString(toLiuqin)}&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+癸卯兔年
+生我为父母
+</pre></div></div>
+</div>
+<p>实际上，直接调用 <code class="docutils literal notranslate"><span class="pre">toShengxiao(yearZhi)</span></code> 也有一样的效果，只是写成 <code class="docutils literal notranslate"><span class="pre">ToString</span></code> 的形式更加好看一些。此外，也支持自己定义转换：</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">EntityToStringConversion</span><span class="o">&lt;</span><span class="kt">object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myConversation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">$&quot;{x.GetType().Name}[{x}]&quot;</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="n">myConversation</span><span class="p">));</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">23.</span><span class="n">ToString</span><span class="p">(</span><span class="n">myConversation</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+String[Hello World]
+Int32[23]
+</pre></div></div>
 </div>
 </section>
 
@@ -342,12 +404,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="EntityCharacteristics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">EntityCharacteristics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="GuaCharacters.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">EntityCharacteristics</p>
+        <p class="prev-next-title">GuaCharacters</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
