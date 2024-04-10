@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
     <title>简介 &#8212; YiJingFramework. Annotating</title>
   
   
@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="YiJingFramework.Annotating" href="index.html" />
+    <link rel="prev" title="Annotating" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -340,7 +340,7 @@ document.write(`
 </div>
 <p>此包提供了一个泛用的注解仓库结构。所谓的注解，例如《周易》就是为卦和卦爻所作的注解。</p>
 <blockquote>
-<div><p>此仓库关注的是通用结构，如果只关注《周易》，可以使用 <a class="reference external" href="https://github.com/YiJingFramework/Annotating.Zhouyi/wiki">YiJingFramework.Annotating.Zhouyi</a> 。</p>
+<div><p>此仓库关注的是通用结构，如果只关注《周易》，可以使用 <a class="reference external" href="https://yjfwk.yueyinqiu.top/Annotating.Zhouyi/">YiJingFramework.Annotating.Zhouyi</a> 。</p>
 </div></blockquote>
 <p>此包原来给出的结构相对复杂，有好多种可以作为 key 的类型，比如一整个卦、某几根爻。但是在 <code class="docutils literal notranslate"><span class="pre">4.0.0</span></code> 版本之后，只有字符串类型可以作为 key ，因此现在的结构是非常简单的。</p>
 <p>每个 <code class="docutils literal notranslate"><span class="pre">AnnotationStore</span></code> 应该对应一个 json 文件，其中包含一个 <code class="docutils literal notranslate"><span class="pre">string?</span> <span class="pre">Title</span></code> （对应的 json 文件中为 <code class="docutils literal notranslate"><span class="pre">n</span></code> ）、一个 <code class="docutils literal notranslate"><span class="pre">IList&lt;string&gt;</span> <span class="pre">Tags</span></code> （ <code class="docutils literal notranslate"><span class="pre">t</span></code> ）和一个 <code class="docutils literal notranslate"><span class="pre">IList&lt;AnnotationGroup&gt;</span> <span class="pre">Groups</span></code> （ <code class="docutils literal notranslate"><span class="pre">g</span></code> ）。其中每个 <code class="docutils literal notranslate"><span class="pre">AnnotationGroup</span></code> 又包含 <code class="docutils literal notranslate"><span class="pre">string?</span> <span class="pre">Title</span></code> （ <code class="docutils literal notranslate"><span class="pre">t</span></code> ）、 <code class="docutils literal notranslate"><span class="pre">string?</span> <span class="pre">Comment</span></code> （ <code class="docutils literal notranslate"><span class="pre">c</span></code> ）和 <code class="docutils literal notranslate"><span class="pre">IList&lt;AnnotationEntry&gt;</span> <span class="pre">Entries</span></code> （ <code class="docutils literal notranslate"><span class="pre">e</span></code> ）。而每个 <code class="docutils literal notranslate"><span class="pre">AnnotationEntry</span></code> 中又包含 <code class="docutils literal notranslate"><span class="pre">string?</span> <span class="pre">Target</span></code> （ <code class="docutils literal notranslate"><span class="pre">t</span></code> ）和 <code class="docutils literal notranslate"><span class="pre">string?</span> <span class="pre">Content</span></code> （ <code class="docutils literal notranslate"><span class="pre">c</span></code> ）。</p>
@@ -427,7 +427,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">YiJingFramework.Annotating</p>
+        <p class="prev-next-title">Annotating</p>
       </div>
     </a>
 </div>
