@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link href="_static/taiji.png" sizes="360x360" rel="icon" type="image/png">
     <title>简介 &#8212; YiJingFramework. Annotating. Zhouyi</title>
   
   
@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction';</script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="YiJingFramework.Annotating.Zhouyi" href="index.html" />
+    <link rel="prev" title="Zhouyi" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -356,7 +356,7 @@ document.write(`
 <span class="n">Debug</span><span class="p">.</span><span class="n">Assert</span><span class="p">(</span><span class="n">store</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="k">null</span><span class="p">);</span>
 
 <span class="kt">var</span><span class="w"> </span><span class="n">qian</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store</span><span class="p">.</span><span class="n">GetHexagram</span><span class="p">(</span><span class="n">GuaHexagram</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;111111&quot;</span><span class="p">));</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian</span><span class="p">.</span><span class="n">Yong</span><span class="p">.</span><span class="n">YaoText</span><span class="p">);</span><span class="w"> </span><span class="c1">// 见群龙无首吉</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian</span><span class="p">.</span><span class="n">Yong</span><span class="p">.</span><span class="n">YaoText</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -368,9 +368,9 @@ document.write(`
 见群龙无首吉
 </pre></div></div>
 </div>
-<p>上例中，是下载了一个注解仓库，当然也可以直接读取本地文件。然后可以 <code class="docutils literal notranslate"><span class="pre">GetHexagram</span></code> 获取到 <code class="docutils literal notranslate"><span class="pre">ZhouyiHexagram</span></code> ，其中包括各种卦辞爻辞。</p>
-<p><code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 的内部维护了一个 <code class="docutils literal notranslate"><span class="pre">AnnotationStore</span></code> （在 <a class="reference external" href="https://github.com/YiJingFramework/Annotating/wiki">YiJingFramework.Annotating</a> 中），可以通过它的 <code class="docutils literal notranslate"><span class="pre">Store</span></code> 属性取得内部的仓库。所有和文件相关的操作都是由内部的仓库完成的，而 <code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 只是访问这个内部仓库来产生 <code class="docutils literal notranslate"><span class="pre">ZhouyiHexagram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ZhouyiTrigram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Xici</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Shuogua</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Xugua</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Zagua</span></code> 等对象。 <code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 可能访问的注解组也提供在了 <code class="docutils literal notranslate"><span class="pre">Groups</span></code>
-属性中。不过，除非有特殊要求，一般不建议直接访问内部仓库，而是应该使用 <code class="docutils literal notranslate"><span class="pre">ZhouyiStore.UpdateStore</span></code> 方法。</p>
+<p>上例中，是下载了一个注解仓库，当然也可以直接读取本地文件，或者使用程序集内的资源。然后可以使用 <code class="docutils literal notranslate"><span class="pre">GetHexagram</span></code> 获取到 <code class="docutils literal notranslate"><span class="pre">ZhouyiHexagram</span></code> ，其中包括各种卦辞爻辞。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 的内部维护了一个 <code class="docutils literal notranslate"><span class="pre">AnnotationStore</span></code> （在 <a class="reference external" href="https://yjfwk.yueyinqiu.top/Annotating/">YiJingFramework.Annotating</a> 中），可以通过它的 <code class="docutils literal notranslate"><span class="pre">Store</span></code> 属性取得内部的仓库。所有和文件相关的操作都是由内部的仓库完成的，而 <code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 只是访问这个内部仓库来产生 <code class="docutils literal notranslate"><span class="pre">ZhouyiHexagram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">ZhouyiTrigram</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Xici</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Shuogua</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Xugua</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Zagua</span></code> 等对象。 <code class="docutils literal notranslate"><span class="pre">ZhouyiStore</span></code> 可能访问的注解组也提供在了 <code class="docutils literal notranslate"><span class="pre">Groups</span></code> 属性中。不过，除非有特殊要求，一般不建议直接访问内部仓库，而是应该使用
+<code class="docutils literal notranslate"><span class="pre">ZhouyiStore.UpdateStore</span></code> 方法。</p>
 <p>其中，获取到的 <code class="docutils literal notranslate"><span class="pre">ZhouyiHexagram</span></code> 等对象与仓库没有绑定关系。也就是说，对它们的修改不会同步到仓库中，同时仓库的修改不会导致已获取到的对象发生变化。如果要根据生成的对象来修改仓库，可以使用前面提到的 <code class="docutils literal notranslate"><span class="pre">UpdateStore</span></code> 方法，如：</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -380,24 +380,24 @@ document.write(`
 <span class="kt">var</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ZhouyiStore</span><span class="p">(</span><span class="n">innerStore</span><span class="p">);</span>
 
 <span class="n">innerStore</span><span class="p">.</span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Store Title&quot;</span><span class="p">;</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">Title</span><span class="p">);</span><span class="w"> </span><span class="c1">// Store Title</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">Title</span><span class="p">);</span>
 <span class="n">store</span><span class="p">.</span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Title Store&quot;</span><span class="p">;</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">innerStore</span><span class="p">.</span><span class="n">Title</span><span class="p">);</span><span class="w"> </span><span class="c1">// Title Store</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">innerStore</span><span class="p">.</span><span class="n">Title</span><span class="p">);</span>
 
 <span class="n">store</span><span class="p">.</span><span class="n">Groups</span><span class="p">.</span><span class="n">HexagramNameGroup</span><span class="p">.</span><span class="n">AddEntry</span><span class="p">(</span><span class="s">&quot;111111&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Qian&quot;</span><span class="p">);</span>
 
 <span class="kt">var</span><span class="w"> </span><span class="n">qian1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store</span><span class="p">.</span><span class="n">GetHexagramByName</span><span class="p">(</span><span class="s">&quot;qian&quot;</span><span class="p">);</span>
 <span class="n">Debug</span><span class="p">.</span><span class="n">Assert</span><span class="p">(</span><span class="n">qian1</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="k">null</span><span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian1</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span><span class="w"> </span><span class="c1">// qian</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian1</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
 
 <span class="n">qian1</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;QIAN&quot;</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">qian2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store</span><span class="p">.</span><span class="n">GetHexagram</span><span class="p">(</span><span class="n">GuaHexagram</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;111111&quot;</span><span class="p">));</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian2</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span><span class="w"> </span><span class="c1">// qian</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian2</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
 <span class="n">store</span><span class="p">.</span><span class="n">UpdateStore</span><span class="p">(</span><span class="n">qian1</span><span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian2</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span><span class="w"> </span><span class="c1">// qian</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian2</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
 
 <span class="kt">var</span><span class="w"> </span><span class="n">qian3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store</span><span class="p">.</span><span class="n">GetHexagram</span><span class="p">(</span><span class="n">GuaHexagram</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;111111&quot;</span><span class="p">));</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian3</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span><span class="w"> </span><span class="c1">// QIAN</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">qian3</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -2754,7 +2754,7 @@ Yang
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">YiJingFramework.Annotating.Zhouyi</p>
+        <p class="prev-next-title">Zhouyi</p>
       </div>
     </a>
 </div>
